@@ -42,7 +42,8 @@ function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
 
-	let gain = new Decimal(1)
+	let gain = new Decimal(hasUpgrade('p', 11) ? 2 : 0)
+	gain = player.points.pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points)
 	return gain
 }
 
@@ -56,7 +57,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("10^^1e308"))
 }
 
 
