@@ -42,8 +42,7 @@ function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
 
-	let gain = new Decimal(hasUpgrade('p', 11) ? 2 : 0)
-	gain = player.points.pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points).pow(player.points)
+	let gain = new Decimal(hasUpgrade('p', 12) ? 1 : 0)
 	return gain
 }
 
